@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+* {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+        background-color: var(--bg-deep);
+        color: var(--text-main);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background-image: 
+            radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 40%),
+            radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 40%);
+    }
+
+    .container {
+        width: 100%;
+        max-width: 480px;
+        background: var(--surface);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 32px 24px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+        text-align: center;
+    }
+
+    .logo-area {
+        margin-bottom: 24px;
+    }
+
+    .logo-icon {
+        width: 64px;
+        height: 64px;
+        background: linear-gradient(135deg, var(--gold), #997a15);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 16px;
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    }
+
+    .logo-icon svg {
+        width: 32px;
+        height: 32px;
+        fill: var(--bg-deep);
+    }
+
+    h1 {
+        font-size: 26px;
+        font-weight: 700;
+        color: var(--gold-light);
+        margin-bottom: 8px;
+        letter-spacing: -0.5px;
+    }
+
+    p.subtitle {
+        color: var(--text-muted);
+        font-size: 14px;
+        margin-bottom: 32px;
+    }
+
+    .controls-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin-bottom: 24px;
+    }
+
+    .control-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 16px;
+        padding: 20px 16px;
+        text-align: center;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .control-card:active {
+        transform: scale(0.97);
+        background: rgba(212, 175, 55, 0.08);
+        border-color: var(--gold);
+    }
+
+    .control-card svg {
+        width: 24px;
+        height: 24px;
+        stroke: var(--gold);
+        margin-bottom: 12px;
+    }
+
+    .control-card span {
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--text-main);
+    }
+
+    .service-btn {
+        width: 100%;
+        background: linear-gradient(135deg, var(--gold), #aa820a);
+        color: var(--bg-deep);
+        border: none;
+        border-radius: 14px;
+        padding: 16px;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+        transition: opacity 0.2s;
+        margin-top: 8px;
+    }
+
+    .service-btn:active {
+        opacity: 0.9;
+    }
+
+    .status-bar {
+        margin-top: 24px;
+        font-size: 12px;
+        color: var(--text-muted);
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        padding-top: 16px;
+        display: flex;
+        justify-content: space-between;
+    }
+</style>
+
+<div class="container">
+    <div class="logo-area">
+        <div class="logo-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h1>مُضيف</h1>
+        <p class="subtitle">بوابة الضيافة الفاخرة والتحكم الذكي</p>
+    </div>
+
+    <div class="controls-grid">
+        <div class="control-card" onclick="alert('تم تفعيل الإضاءة المحيطية بنجاح')">
+            <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+            <span>الإضاءة</span>
+        </div>
